@@ -1,0 +1,103 @@
+base-files,13,
+base-passwd,3.6.1,GPL-2,public-domain
+bash,5.2.15-2,BSD-4-clause-UC,BSD-4-clause-UC and MIT-like,GFDL-NIV-1.3,GPL-2+,GPL-3+,GPL-3+ with Bison exception,Latex2e,MIT-like,permissive
+bsdutils,2.38.1-6,BSD-3-clause,BSD-4-clause,BSLA,GPL-2,GPL-2+,GPL-3+,LGPL,LGPL-2+,LGPL-2.1+,LGPL-3+,MIT,public-domain
+coreutils,9.1-1,BSD-4-clause-UC,FSFULLR,GFDL-NIV-1.3,GPL-3+,GPL-3+ and BSD-4-clause-UC,GPL-3+ and ISC,ISC
+dash,0.5.12-6,BSD-3-clause,BSD-3-Clause,GPL-2+,public-domain
+debconf,1.5.82,BSD-2-clause
+debianutils,5.8-1,GPL-2+,public-domain,SMAIL-GPL
+diffutils,3.8-4,FSFAP,FSFULLR,GFDL-NIV-1.3,GPL-2+,GPL-3+,GPL-3+ and FSFULLR,GPL-3+ with autoconf exception,GPL-3+ with texinfo exception,LGPL-2.0+,LGPL-2.1+,LGPL-3.0+,LGPL-3.0+ or GPL-2+,public-domain,X11
+dpkg,1.21.22,BSD-2-clause,GPL-2,GPL-2+,public-domain-s-s-d
+e2fsprogs,1.47.0-2,Apache-2,BSD-3-Clause,GPL-2,GPL-2+ with Texinfo exception,GPL or MIT-US-export,ISC,Kazlib,Latex2e,LGPL-2
+findutils,4.9.0-5,BSD-3-clause,BSD-3-clause and/or GPL-3+,FSFAP,FSFULLR,GFDL-NIV-1.3+,GPL-2+,GPL-2+ with Autoconf-data exception,GPL-3+,GPL-3+ with Autoconf-data exception,GPL-3+ with Bison-2.2 exception,GPL with automake exception,ISC,ISC and/or LGPL-2.1+,LGPL-2+,LGPL-2.1+,LGPL-3,LGPL-3+,public-domain,X11
+gcc-12-base,12.3.0-6,
+grep,3.11-2,GPL-3+
+gzip,1.12-1,FSF-manpages,GFDL-1.3+-no-invariant,GPL-3+
+hostname,3.23,GPL-2
+init-system-helpers,1.65.2,BSD-3-clause,GPL-2+
+libacl1,2.3.1-3,GPL-2+,LGPL-2+
+libattr1,2.5.1-4,GPL-2+,LGPL-2+
+libaudit-common,3.1.1-1,GPL-2,LGPL-2.1
+libaudit1,3.1.1-1,GPL-2,LGPL-2.1
+libblkid1,2.38.1-6,BSD-3-clause,BSD-4-clause,BSLA,GPL-2,GPL-2+,GPL-3+,LGPL,LGPL-2+,LGPL-2.1+,LGPL-3+,MIT,public-domain
+libbz2-1.0,1.0.8-5,BSD-variant,GPL-2
+libc-bin,2.37-6,
+libc6,2.37-6,
+libcap-ng0,0.8.3-1,GPL-2+,GPL-3,LGPL-2.1+
+libcap2,2.66-4,BSD-3-clause,BSD-3-clause or GPL-2,BSD-3-clause or GPL-2+,GPL-2,GPL-2+
+libcom-err2,1.47.0-2,Apache-2,BSD-3-Clause,GPL-2,GPL-2+ with Texinfo exception,GPL or MIT-US-export,ISC,Kazlib,Latex2e,LGPL-2
+libcrypt1,4.4.35-1,
+libdb5.3,5.3.28,
+libdebconfclient0,0.270,BSD-2-clause,BSD-2-Clause,GPL-2+
+libext2fs2,1.47.0-2,Apache-2,BSD-3-Clause,GPL-2,GPL-2+ with Texinfo exception,GPL or MIT-US-export,ISC,Kazlib,Latex2e,LGPL-2
+libfile-find-rule-perl,0.34-3,Artistic,Artistic or GPL-1+,GPL-1+
+libgcc-s1,13.1.0-9,
+libgcrypt20,1.10.2-2,,GPLv2+,LGPLv2.1+
+libgdbm-compat4,1.23-3,GFDL-NIV-1.3+,GPL-2+,GPL-3+
+libgdbm6,1.23-3,GFDL-NIV-1.3+,GPL-2+,GPL-3+
+libgmp10,6.2.1,
+libgpg-error0,1.46-1,BSD-3-clause,g10-permissive,GPL-3+,LGPL-2.1+,LGPL-2.1+ or BSD-3-clause
+liblocale-gettext-perl,1.07-5,Artistic,Artistic or GPL-1+,GPL-1+
+liblz4-1,1.9.4-1,BSD-2-clause,GPL-2+,GPL-2+ or BSD-2-clause
+liblzma5,5.4.1-0.2,,Autoconf,config-h,GPL-2,GPL-2+,LGPL-2.1+,noderivs,none,PD,PD-debian,permissive-fsf,permissive-nowarranty,probably-PD
+libmd0,1.1.0-1,Beerware,BSD-2-clause,BSD-2-clause-NetBSD,BSD-3-clause,BSD-3-clause-Aaron-D-Gifford,ISC,public-domain-md4,public-domain-md5,public-domain-sha1
+libmount1,2.38.1-6,BSD-3-clause,BSD-4-clause,BSLA,GPL-2,GPL-2+,GPL-3+,LGPL,LGPL-2+,LGPL-2.1+,LGPL-3+,MIT,public-domain
+libnumber-compare-perl,0.03-3,Artistic,Artistic or GPL-1+,GPL-1+
+libpam-modules,1.5.2-6,Beerware,BSD-3-clause or GPL,BSD-tcp_wrappers,GPL-2,GPL-2+,GPL-3,GPL-3+ with Bison exception,LGPL-2+,public-domain
+libpam-modules-bin,1.5.2-6,Beerware,BSD-3-clause or GPL,BSD-tcp_wrappers,GPL-2,GPL-2+,GPL-3,GPL-3+ with Bison exception,LGPL-2+,public-domain
+libpam-runtime,1.5.2-6,Beerware,BSD-3-clause or GPL,BSD-tcp_wrappers,GPL-2,GPL-2+,GPL-3,GPL-3+ with Bison exception,LGPL-2+,public-domain
+libpam0g,1.5.2-6,Beerware,BSD-3-clause or GPL,BSD-tcp_wrappers,GPL-2,GPL-2+,GPL-3,GPL-3+ with Bison exception,LGPL-2+,public-domain
+libpcre2-8-0,10.42-2,BSD-2-clause,BSD-3-clause,BSD-3-clause-Cambridge with BINARY LIBRARY-LIKE PACKAGES exception,public-domain,X11
+libperl5.36,5.36.0-7,Artistic,Artistic-2,Artistic-dist,Artistic or GPL-1+ or Artistic-dist,BSD-3-clause,BSD-3-clause-GENERIC,BSD-3-clause-with-weird-numbering,BSD-4-clause-POWERDOG,BZIP,CC0-1.0,DONT-CHANGE-THE-GPL,Expat,Expat or GPL-1+ or Artistic,GPL-1+,GPL-1+ or Artistic,GPL-1+ or Artistic, and BSD-3-clause-GENERIC,GPL-1+ or Artistic, and BSD-4-clause-POWERDOG,GPL-1+ or Artistic, and Expat,GPL-1+ or Artistic, and Unicode,GPL-1+ or Artistic or Artistic-dist,GPL-2+,GPL-2+ or Artistic,GPL-3+-WITH-BISON-EXCEPTION,HSIEH-BSD,HSIEH-DERIVATIVE,LGPL-2.1,REGCOMP,REGCOMP, and GPL-1+ or Artistic,RRA-KEEP-THIS-NOTICE,SDBM-PUBLIC-DOMAIN,TEXT-TABS,Unicode,ZLIB
+libselinux1,3.5-1,GPL-2,public-domain
+libsemanage-common,3.5-1,GPL-2,LGPL-2.1+
+libsemanage2,3.5-1,GPL-2,LGPL-2.1+
+libsepol2,3.5-1,GPL-2,GPL-2+,LGPL-2.1+,Zlib
+libsmartcols1,2.38.1-6,BSD-3-clause,BSD-4-clause,BSLA,GPL-2,GPL-2+,GPL-3+,LGPL,LGPL-2+,LGPL-2.1+,LGPL-3+,MIT,public-domain
+libss2,1.47.0-2,Apache-2,BSD-3-Clause,GPL-2,GPL-2+ with Texinfo exception,GPL or MIT-US-export,ISC,Kazlib,Latex2e,LGPL-2
+libsystemd0,254~rc2-3,
+libtext-charwidth-perl,0.04-11,Artistic,Artistic or GPL-1+,GPL-1+
+libtext-glob-perl,0.11-3,Artistic,Artistic or GPL-1+,GPL-1+
+libtext-iconv-perl,1.7-8,Artistic,Artistic or GPL-1+,GPL-1+
+libtext-wrapi18n-perl,0.06-10,Artistic,Artistic or GPL-1+,GPL-1+
+libtinfo6,6.4,
+libudev1,254~rc2-3,
+libuuid1,2.38.1-6,BSD-3-clause,BSD-4-clause,BSLA,GPL-2,GPL-2+,GPL-3+,LGPL,LGPL-2+,LGPL-2.1+,LGPL-3+,MIT,public-domain
+libzstd1,1.5.5,
+login,4.13+dfsg1-1,
+logsave,1.47.0-2,Apache-2,BSD-3-Clause,GPL-2,GPL-2+ with Texinfo exception,GPL or MIT-US-export,ISC,Kazlib,Latex2e,LGPL-2
+mawk,1.3.4.20230525-1,CC-BY-3.0,GPL-2.0-only,X11
+mount,2.38.1-6,BSD-3-clause,BSD-4-clause,BSLA,GPL-2,GPL-2+,GPL-3+,LGPL,LGPL-2+,LGPL-2.1+,LGPL-3+,MIT,public-domain
+ncurses-base,6.4-4,BSD-3-clause,MIT/X11,X11
+ncurses-bin,6.4,
+passwd,4.13+dfsg1-1,
+perl,5.36.0-7,Artistic,Artistic-2,Artistic-dist,Artistic or GPL-1+ or Artistic-dist,BSD-3-clause,BSD-3-clause-GENERIC,BSD-3-clause-with-weird-numbering,BSD-4-clause-POWERDOG,BZIP,CC0-1.0,DONT-CHANGE-THE-GPL,Expat,Expat or GPL-1+ or Artistic,GPL-1+,GPL-1+ or Artistic,GPL-1+ or Artistic, and BSD-3-clause-GENERIC,GPL-1+ or Artistic, and BSD-4-clause-POWERDOG,GPL-1+ or Artistic, and Expat,GPL-1+ or Artistic, and Unicode,GPL-1+ or Artistic or Artistic-dist,GPL-2+,GPL-2+ or Artistic,GPL-3+-WITH-BISON-EXCEPTION,HSIEH-BSD,HSIEH-DERIVATIVE,LGPL-2.1,REGCOMP,REGCOMP, and GPL-1+ or Artistic,RRA-KEEP-THIS-NOTICE,SDBM-PUBLIC-DOMAIN,TEXT-TABS,Unicode,ZLIB
+perl-base,5.36.0-7,Artistic,Artistic-2,Artistic-dist,Artistic or GPL-1+ or Artistic-dist,BSD-3-clause,BSD-3-clause-GENERIC,BSD-3-clause-with-weird-numbering,BSD-4-clause-POWERDOG,BZIP,CC0-1.0,DONT-CHANGE-THE-GPL,Expat,Expat or GPL-1+ or Artistic,GPL-1+,GPL-1+ or Artistic,GPL-1+ or Artistic, and BSD-3-clause-GENERIC,GPL-1+ or Artistic, and BSD-4-clause-POWERDOG,GPL-1+ or Artistic, and Expat,GPL-1+ or Artistic, and Unicode,GPL-1+ or Artistic or Artistic-dist,GPL-2+,GPL-2+ or Artistic,GPL-3+-WITH-BISON-EXCEPTION,HSIEH-BSD,HSIEH-DERIVATIVE,LGPL-2.1,REGCOMP,REGCOMP, and GPL-1+ or Artistic,RRA-KEEP-THIS-NOTICE,SDBM-PUBLIC-DOMAIN,TEXT-TABS,Unicode,ZLIB
+perl-modules-5.36,5.36.0-7,Artistic,Artistic-2,Artistic-dist,Artistic or GPL-1+ or Artistic-dist,BSD-3-clause,BSD-3-clause-GENERIC,BSD-3-clause-with-weird-numbering,BSD-4-clause-POWERDOG,BZIP,CC0-1.0,DONT-CHANGE-THE-GPL,Expat,Expat or GPL-1+ or Artistic,GPL-1+,GPL-1+ or Artistic,GPL-1+ or Artistic, and BSD-3-clause-GENERIC,GPL-1+ or Artistic, and BSD-4-clause-POWERDOG,GPL-1+ or Artistic, and Expat,GPL-1+ or Artistic, and Unicode,GPL-1+ or Artistic or Artistic-dist,GPL-2+,GPL-2+ or Artistic,GPL-3+-WITH-BISON-EXCEPTION,HSIEH-BSD,HSIEH-DERIVATIVE,LGPL-2.1,REGCOMP,REGCOMP, and GPL-1+ or Artistic,RRA-KEEP-THIS-NOTICE,SDBM-PUBLIC-DOMAIN,TEXT-TABS,Unicode,ZLIB
+sed,4.9-1,BSD-4-clause-UC,BSL-1,GFDL-NIV-1.3+,GPL-3+,GPL-3+ and ISC,ISC,pcre,X11
+sensible-utils,0.0.20,All-permissive,configure,GPL-2+,installsh
+sysvinit-utils,3.07-1,GPL-2.0,GPL-2.0+,GPL-3.0
+tar,1.34,GPL-2+,GPL-3+,GPL-3+ with Bison exception,LGPL-3+
+tzdata,2023c-7,public-domain
+usrmerge,35,GPL-2+
+util-linux,2.38.1-6,BSD-3-clause,BSD-4-clause,BSLA,GPL-2,GPL-2+,GPL-3+,LGPL,LGPL-2+,LGPL-2.1+,LGPL-3+,MIT,public-domain
+util-linux-extra,2.38.1-6,BSD-3-clause,BSD-4-clause,BSLA,GPL-2,GPL-2+,GPL-3+,LGPL,LGPL-2+,LGPL-2.1+,LGPL-3+,MIT,public-domain
+zlib1g,1.2.13.dfsg-1,Zlib
+apt,2.7.2,BSD-3-clause,Expat,GPL-2,GPL-2+
+ca-certificates,20230311,GPL-2+,MPL-2.0
+debian-archive-keyring,2023.3,
+gpgv,2.2.40-1.1,BSD-3-clause,CC0-1.0,Expat,GPL-3+,GPL-3+ or BSD-3-clause,LGPL-2.1+,LGPL-3+,permissive,RFC-Reference,TinySCHEME
+libapt-pkg6.0,2.7.2,BSD-3-clause,Expat,GPL-2,GPL-2+
+libffi8,3.4.4-1,Expat,GPL,GPL-2+,GPL-3+,MPL-1.1 or GPL-2+ or LGPL-2.1+,public-domain,X11
+libgnutls30,3.7.9-2,,Apache-2.0,BSD-3-Clause,CC0 license,Expat,GPLv3+,LGPLv2.1+,LGPLv3+_or_GPLv2+,The main library is licensed under GNU Lesser
+libhogweed6,3.8.1-2,Expat,GAP,GPL-2,GPL-2+,GPL-3+,GPL-3+ with Autoconf exception,LGPL-2+,LGPL-3+,LGPL-3+ or GPL-2+,public-domain
+libidn2-0,2.3.4-1,GPL-2+,GPL-3+,LGPL-3+,LGPL-3+ or GPL-2+,Unicode
+libnettle8,3.8.1-2,Expat,GAP,GPL-2,GPL-2+,GPL-3+,GPL-3+ with Autoconf exception,LGPL-2+,LGPL-3+,LGPL-3+ or GPL-2+,public-domain
+libp11-kit0,0.25.0-3,Apache-2.0,BSD-3-Clause,ISC,ISC+IBM,LGPL-2.1+,permissive-like-automake-output,same-as-rest-of-p11kit
+libseccomp2,2.5.4-1,LGPL-2.1
+libssl3,3.0.9-1,Apache-2.0,Artistic,Artistic or GPL-1+,GPL-1+
+libstdc++6,,
+libtasn1-6,4.19.0-3,
+libunistring2,1.0-2,FreeSoftware,GFDL-1.2+,GPL-2+,GPL-2+ with distribution exception,GPL-3+,GPL-3+ or GFDL-1.2+,LGPL-3+,LGPL-3+ or GPL-2+,MIT
+libxxhash0,0.8.1-1,BSD-2-clause,GPL-2
+openssl,3.0.9-1,Apache-2.0,Artistic,Artistic or GPL-1+,GPL-1+

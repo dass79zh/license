@@ -1,0 +1,50 @@
+Package: bash-bin
+Source: bash (5.2.15-2)
+Version: 5.2.15-2+b3
+Essential: yes
+Installed-Size: 7164
+Maintainer: Matthias Klose <doko@debian.org>
+Architecture: amd64
+Replaces: bash-completion (<< 20060301-0), bash-doc (<= 2.05-1)
+Depends: base-files (>= 2.1.12), debianutils (>= 5.6-0.1)
+Pre-Depends: libc6 (>= 2.36), libtinfo6 (>= 6)
+Recommends: bash-completion (>= 20060301-0)
+Suggests: bash-doc
+Conflicts: bash-completion (<< 20060301-0)
+Description: GNU Bourne Again SHell
+Multi-Arch: foreign
+Homepage: http://tiswww.case.edu/php/chet/bash/bashtop.html
+Description-md5: 3522aa7b4374048d6450e348a5bb45d9
+Tag: admin::TODO, devel::TODO, devel::interpreter, implemented-in::c,
+ interface::shell, interface::text-mode, role::program,
+ scope::application, suite::gnu, uitoolkit::ncurses
+Section: shells
+Priority: required
+Filename: pool/main/b/bash/bash_5.2.15-2+b3_amd64.deb
+Size: 1489396
+MD5sum: 620bbd7278a2894f5d8714a667eb4855
+SHA256: 505546d8340f700a76ef36a779f6ad2d429131d0bb0b4bd0da717228519bd45c
+
+Package: samba
+Version: 2:4.18.5+dfsg-1
+Installed-Size: 3968
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Depends: passwd, libpam-modules, libpam-runtime (>= 1.0.1-11), procps, python3, python3-dnspython, python3-samba (= 2:4.18.5+dfsg-1), samba-common (= 2:4.18.5+dfsg-1), samba-common-bin (= 2:4.18.5+dfsg-1), tdb-tools, python3:any, libbsd0 (>= 0.6.0), libc6 (>= 2.34), libcups2 (>= 1.7.0), libgnutls30 (>= 3.7.0), libldap-2.5-0 (>= 2.5.4), libldb2 (>= 2:2.6.1), libpopt0 (>= 1.14), libtalloc2 (>= 2.4.0), libtasn1-6 (>= 4.14), libtdb1 (>= 1.4.8~), libtevent0 (>= 0.14.0~), samba-libs (= 2:4.18.5+dfsg-1)
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: attr, logrotate, python3-markdown, samba-dsdb-modules, samba-vfs-modules, samba-ad-provision
+Suggests: bind9 (>= 1:9.5.1), bind9utils, ctdb, ldb-tools, ntp | chrony (>= 3.0-1), ufw, winbind
+Enhances: bind9, ntp
+Breaks: samba-ad-provision (<< 2:4.18.5+dfsg)
+Description: SMB/CIFS file, print, and login server for Unix
+Homepage: https://www.samba.org
+Description-md5: c9d307ae5cf3b46be12b53a9f95862f0
+Tag: admin::filesystem, implemented-in::c, interface::daemon,
+ network::server, network::service, protocol::smb, role::program,
+ suite::samba, use::configuring
+Section: net
+Priority: optional
+Filename: pool/main/s/samba/samba_4.18.5+dfsg-1_amd64.deb
+Size: 951016
+MD5sum: e0a64d83b826a0ddf19953ffe7a709f6
+SHA256: aa3532975d692943e7c490a8741372d63fefa218c7c14832c089ef6cb1ded9b9
