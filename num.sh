@@ -1,0 +1,10 @@
+#!/bin/bash
+pkgver1="2:4.17.10+dfsg-0+deb12u1"
+pkgver2="4.17.10-dfsg-1sber12"
+pkgver3="4.17.10dfsg1sber12"
+result1="0+deb12u1"
+result2="1sber12"
+echo "Grep:"
+echo -e "$pkgver1\n$pkgver2\n$pkgver3" | grep -o -e "[^-]*$"
+echo "Bash:"
+echo -e "${pkgver1##*-}\n${pkgver2##*-}\n${pkgver3##*-}"

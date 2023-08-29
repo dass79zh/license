@@ -3,83 +3,121 @@
 
 pkglist="pkg.lst"
 
-while read line; do
+pkg_regex=
+while read filename; do
+  pkg_regex="${pkg_regex:+$pkg_regex|}$filename"
 
-package="$line"
+done <"${pkglist}"
 
-function pkg_parse {
+#done <<EOF
+#bash
+#samba
+#libxxhash0
+#libgdbm6
+#libunistring2
+#xrstools
+#acme
+#python3-xrstools
 
-    index_file_name="Packages.xz"
-    #index_file_name="p.txt"
+#EOF
+pkg_regex="(${pkg_regex})"
 
-    pkg_filename=`
-      xzcat "$index_file_name" |
-      sed -nE '/^Package: '"$1"'$/{
-        :loop
-        $!{
-          n
-          /^$/q
-          /^Source:/p
-          /^Filename: /s/.*:\s*//p
-          b loop
-        }
-      }'
-    `
-}
+echo $pkg_regex
 
-function get_copyright {
+index_file_name="Packages.xz"
+#index_file_name="p.txt"
 
-( 
- echo -n "$pkg_name,"
- echo -n "$pkg_ver,"
- echo "Getting $pkg_url" >&2
- wget -O - "$1" |
- sed -ne '/^License/s/^.*:\s*//p' |
- sort |
- uniq |
- tr '\n' ',' |
- sed -e 's/,$//'
- echo
-) >>license.txt
+package=
+filename=
+version=
+srcpkg=
+postfix=
 
-}
+xzcat "$index_file_name" |
+sed -nre '
+  /^Package: '"$pkg_regex"'$/{
+    s/.*:\s*/P	/p
+    :loop
+    $!{
+      n
+      /^$/b end
+      /^Filename: /s/.*:\s*/F	/p
+      /^Source: /s/.*:\s*/S	/p
+      b loop
+    }
+    :end
+    p
+  }' |
 
+while IFS='	' read tag value; do
+  case "$tag" in 
+    "")
+      echo "*** Package: $package"
+      echo "*** Source package: $srcpkg"
+      if [ -n "$srcpkg" ]; then
+         postfix=1
+      else
+        srcpkg="$package"
+        echo "*** Source package: $srcpkg"
+      fi
+      echo "*** filename: $filename"
+      pkg_ver="${filename%_*.deb}"
+      echo "*** pkg_ver: $pkg_ver"
+      pkg_ver="${pkg_ver#*_}"
+      echo "*** postfix: ${postfix}"
 
-pkg_parse "$package"
-pkg_ver="${pkg_filename%_*.deb}"
-pkg_ver="${pkg_ver#*_}"
-pkg_ver="${pkg_ver%+*}"
-#echo "$pkg_ver"
-license_path="${pkg_filename#*pool/}"
-#echo $license_path
-license_path1="${license_path%/*.deb}"
-license_path="${license_path%_*.deb}"
-#echo $license_path1
-#license_path="${license_path%+*}"
-pkg_name="${package%%_*}"
-[ -z "$pkg_name" ] && { echo "Package name not provided" >&2; exit 1; }
-web_prefix="https://metadata.ftp-master.debian.org/changelogs"
+      if [ -n ${postfix} ]; then
+         pkg_ver="${pkg_ver%+b[0-9]*}"
+         postfix=
+      echo "*** pkg_ver: $pkg_ver"
 
+      else
+        echo 111111111111111
+      fi
+      #pkg_ver="${pkg_ver#*+}"
+      echo "*** pkg_ver: $pkg_ver"
 
-pkg_src1="${pkg_filename}"
-#echo ${pkg_src1}
-pkg_src1=`echo ${pkg_src1} | sed -e s/"^Source: "// -e s/.pool.*// -e s/" .*$"//`
+      license_path="${filename#*pool/}"
 
-echo  "${pkg_src1}"
-#echo "${pkg_src1:0:1}/${pkg_src1}/${pkg_src1}_${pkg_ver}"
-
-pkg_src="${pkg_filename%:*}"
- if [ "$pkg_src" == "Source" ]; then
-    license_path="${license_path1}/${pkg_src1}_${pkg_ver}"
-    echo ${license_path}
-    pkg_url="${web_prefix}/${license_path}_copyright"
-    #echo "${pkg_url}" 
-    get_copyright "$pkg_url"
-    #exit
-  else
-  pkg_url="${web_prefix}/${license_path}_copyright"
-  #echo $pkg_url
-  get_copyright "$pkg_url"  
- fi
-
-done < $pkglist
+      license_path="${license_path%/*.deb}"
+      srcpkg="${license_path#*/*/}"
+      #license_path="${license_path%+*}"
+      echo "*** license_path: $license_path"
+      echo "*** srcpkg: $srcpkg"
+      
+      pkg_name="${package%%_*}"
+      [ -z "$pkg_name" ] && { echo "Package name not provided" >&2; exit 1; }
+      web_prefix="https://metadata.ftp-master.debian.org/changelogs"
+      pkg_url="${web_prefix}/${license_path}/${srcpkg}_${pkg_ver}_copyright"
+      ( 
+        echo -n "$pkg_name: "
+        echo -n "$pkg_ver: "
+        echo "Getting $pkg_url" >&2
+        curl --no-progress-meter -f "$pkg_url" |
+        sed -ne '/^License/s/^.*:\s*//p' |
+        sort |
+        uniq |
+        tr '\n' ',' |
+        sed -e 's/,$//'
+        echo
+      )>>license.txt
+      
+      package=
+      filename=
+      version=
+      srcpkg=
+      ;;
+    "P")
+      package="$value"
+      ;;
+    "F")
+      filename="$value"
+      ;;
+    "S")
+      srcpkg="$value"
+      ;;
+    *)
+      echo "Unknown tag $tag" >&2
+      ;;
+  esac
+done
